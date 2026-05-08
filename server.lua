@@ -21,3 +21,6 @@ AddEventHandler('cat_autoverleih:attemptPay', function(price)
         TriggerClientEvent('esx:showNotification', src, "Du hast nicht genug Bargeld.")
     end
 end)
+
+
+print("[🐈‍⬛ CatVex] Script gestartet ✅")
