@@ -2,14 +2,12 @@ ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
--- Nummernschild generieren
 local function GeneratePlate()
     local num = math.random(100, 999)
     local letters = string.char(math.random(65,90)) .. string.char(math.random(65,90))
     return Config.PlatePrefix .. tostring(num) .. letters
 end
 
--- Zahlung
 RegisterNetEvent('cat_autoverleih:attemptPay')
 AddEventHandler('cat_autoverleih:attemptPay', function(price)
     local src = source

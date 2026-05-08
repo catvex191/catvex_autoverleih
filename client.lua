@@ -7,7 +7,6 @@ Citizen.CreateThread(function()
     end
 end)
 
--- 🎯 Marker & Interaktion
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
@@ -43,7 +42,6 @@ Citizen.CreateThread(function()
     end
 end)
 
--- 🧭 Menü öffnen
 function OpenRentalMenu()
     ESX.UI.Menu.CloseAll()
     ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'rental_menu', {
@@ -62,7 +60,6 @@ function OpenRentalMenu()
     end)
 end
 
--- 🚗 Fahrzeug mieten
 function RentVehicle()
     local playerPed = PlayerPedId()
     local model = GetHashKey(Config.DefaultVehicle)
@@ -80,7 +77,6 @@ function RentVehicle()
     ESX.ShowNotification("Du hast ein Fahrzeug gemietet. Kennzeichen: " .. plate)
 end
 
--- 🔧 Kennzeichen erstellen
 function GeneratePlate()
     local num = math.random(100, 999)
     local letters = string.char(math.random(65,90)) .. string.char(math.random(65,90))
